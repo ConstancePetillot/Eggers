@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+
+
+@import "./variables.scss";
+@import "./workspace-editing.scss";
+
+
+
+// GENERAL SET-UP
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1400px;
+}
