@@ -1,0 +1,119 @@
+/**************** HEADER **************/
+
+header {
+  @include padding-text-mobile;
+
+  height: 60px;
+  padding: 20px 0;
+
+  @media (min-width: 720px) {
+    @include padding-text-desktop;
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+}
+
+.workspace__edward img {
+  display: none;
+  justify-content: center;
+  width: 80%;
+
+  @media (min-width: 720px) {
+    display: flex;
+  }
+}
+
+.workspace__user {
+  display: flex;
+}
+
+.workspace__user-name {
+  padding-right: 10px;
+}
+
+.workspace__user-pic {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: $secondary-font-color;
+}
+
+/**************** SUB-HEADER **************/
+
+.workspace__sub-header {
+  @include padding-text-mobile;
+
+  background-color: $primary-color;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $secondary-background-color;
+
+  @media (min-width: 720px) {
+    @include padding-text-desktop;
+    justify-content: space-between;
+  }
+}
+
+.workspace__sub-header-infos {
+  display: flex;
+}
+
+.workshop__sub-header-logo {
+  background-color: $secondary-color;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.workshop__sub-header-company {
+  display: none;
+  padding-left: 10px;
+
+  @media (min-width: 720px) {
+    display: flex;
+    transform: translateY(25%);
+  }
+}
+
+.workspace__sub-header-menu {
+  display: flex;
+
+  @media (min-width: 720px) {
+    justify-content: space-between;
+    width: 35%;
+    align-items: center;
+  }
+}
+
+.workspace__sub-header-infos {
+  display: none;
+
+  @media (min-width: 720px) {
+    display: flex;
+  }
+}
+
+.workspace__sub-header-workspaces {
+  align-items: center;
+  display: flex;
+  align-content: center;
+}
+
+.workspace__sub-header-workspaces-text {
+  align-items: center;
+
+  @media (min-width: 720px) {
+    padding-right: 30px;
+  }
+}
+
+.workspace__sub-header-workspaces-arrow img {
+  width: 80%;
+  height: 80%;
+}
