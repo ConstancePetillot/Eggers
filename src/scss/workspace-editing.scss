@@ -41,7 +41,9 @@ header {
   background-color: $secondary-font-color;
 }
 
+/******************************************/
 /**************** SUB-HEADER **************/
+/******************************************/
 
 .workspace__sub-header {
   @include padding-text-mobile;
@@ -64,14 +66,15 @@ header {
   display: flex;
 }
 
-.workshop__sub-header-logo {
+.workspace__sub-header-logo {
   background-color: $secondary-color;
   width: 30px;
   height: 30px;
   border-radius: 10px;
+  margin-right: 5px;
 }
 
-.workshop__sub-header-company {
+.workspace__sub-header-company {
   display: none;
   padding-left: 10px;
 
@@ -91,7 +94,7 @@ header {
   }
 }
 
-.workspace__sub-header-infos {
+.workspace__sub-header-info {
   display: none;
 
   @media (min-width: 720px) {
@@ -107,6 +110,7 @@ header {
 
 .workspace__sub-header-workspaces-text {
   align-items: center;
+  padding-right: 10px;
 
   @media (min-width: 720px) {
     padding-right: 30px;
@@ -116,4 +120,82 @@ header {
 .workspace__sub-header-workspaces-arrow img {
   width: 80%;
   height: 80%;
+}
+
+/******************************************/
+/****************** MAIN ******************/
+/******************************************/
+
+.workspace__main {
+  @include padding-text-mobile;
+
+  background-color: $primary-background-color;
+  width: 100vw;
+
+  @media (min-width: 720px) {
+    @include padding-text-desktop;
+  }
+}
+
+/****************************************************/
+/******************* EDITING-TITLE ******************/
+/****************************************************/
+
+.workspace__main-infos {
+  display: flex;
+}
+
+.workspace__main-logo {
+  background-color: $secondary-color;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.workspace__main-company {
+  display: none;
+  padding-left: 10px;
+
+  @media (min-width: 720px) {
+    display: flex;
+    transform: translateY(25%);
+  }
+}
+
+.workspace__main-company:after {
+  content: "";
+  display: inline-block;
+  height: 5px;
+  width: 70vw;
+  margin-right: -100%;
+  margin-left: 10px;
+  border-top: 1px solid black;
+}
+
+.workspace__main-edit-icon {
+  width: 30px;
+}
+
+/****************************************************/
+/*********************** CARDS **********************/
+/****************************************************/
+
+.workspace__cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.workspace__card--first {
+  border: 1px solid black;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 260px;
+  height: 200px;
+
+  @media (min-width: 720px) {
+    width: 400px;
+    height: 200px;
+  }
 }
