@@ -134,6 +134,7 @@ header {
 
   @media (min-width: 720px) {
     @include padding-text-desktop;
+    height: 85vh;
   }
 }
 
@@ -189,26 +190,13 @@ header {
 
 .workspace__cards {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin: 40px auto;
+  flex-wrap: wrap;
 }
 
 .workspace__card {
-  border: 1px solid $secondary-font-color;
-  background-color: $secondary-background-color;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  width: 260px;
-  height: 400px;
-  box-shadow: 5px 2px 20px $secondary-font-color;
-  position: relative;
-
-  @media (min-width: 720px) {
-    width: 400px;
-    height: 200px;
-  }
+  @include card;
 }
 
 .workspace__card-upper-part {
@@ -291,18 +279,7 @@ hr {
 }
 
 .workspace__card-task {
-  width: 50px;
-  height: 50px;
-  background-color: $primary-background-color;
-  border-radius: 5px;
-  margin-bottom: 40px;
-  position: relative;
-
-  @media (min-width: 720px) {
-    margin-bottom: 0px;
-    width: 40px;
-    height: 40px;
-  }
+  @include task;
 
   img {
     position: absolute;
@@ -313,16 +290,7 @@ hr {
 }
 
 .workspace__card-launchpad {
-  width: 40px;
-  height: 40px;
-  background-color: $secondary-background-color;
-  border: 1px solid $primary-color;
-  border-radius: 5px;
-  position: relative;
-
-  @media (min-width: 720px) {
-    margin-bottom: 0px;
-  }
+  @include launchpad;
 
   img {
     position: absolute;
@@ -331,4 +299,37 @@ hr {
     transform: translate(-50%, -50%);
     width: 50%;
   }
+}
+
+/****************************************************/
+/************************ ADD ***********************/
+/****************************************************/
+
+.workspace__add {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: $primary-color;
+  margin: auto;
+  position: relative;
+  margin-bottom: 30px;
+
+  @media (min-width: 720px) {
+    float: right;
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/****************************************************/
+/*********************** FOOTER *********************/
+/****************************************************/
+
+footer {
+  display: flex;
 }
