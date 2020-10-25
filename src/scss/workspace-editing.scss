@@ -70,8 +70,17 @@ header {
   background-color: $secondary-color;
   width: 30px;
   height: 30px;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-right: 5px;
+  position: relative;
+
+  p {
+    color: $secondary-background-color;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .workspace__sub-header-company {
@@ -135,6 +144,7 @@ header {
   @media (min-width: 720px) {
     @include padding-text-desktop;
     height: 85vh;
+    padding-top: 15px;
   }
 }
 
@@ -146,6 +156,7 @@ header {
   display: none;
   @media (min-width: 720px) {
     display: block;
+    opacity: 0.15;
   }
 }
 
@@ -158,25 +169,33 @@ header {
   width: 30px;
   height: 30px;
   border-radius: 5px;
+  margin-right: 5px;
+  position: relative;
+
+  p {
+    color: $secondary-background-color;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .workspace__main-company {
   display: none;
-  padding-left: 10px;
+  padding: 10px;
 
   @media (min-width: 720px) {
     display: flex;
-    transform: translateY(25%);
+    margin: auto 0;
   }
 }
 
 .workspace__main-company:after {
   content: "";
   display: inline-block;
-  height: 5px;
-  width: 50vw;
-  margin-right: -100%;
-  margin-left: 10px;
+  width: 55vw;
+  margin: auto;
   border-top: 1px solid $secondary-font-color;
 }
 
@@ -190,9 +209,13 @@ header {
 
 .workspace__cards {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin: 40px auto;
   flex-wrap: wrap;
+
+  @media (min-width: 1144px) {
+    justify-content: space-between;
+  }
 }
 
 .workspace__card {
@@ -331,5 +354,28 @@ hr {
 /****************************************************/
 
 footer {
+  @include padding-text-mobile;
+
+  width: 100%;
   display: flex;
+  justify-content: space-between;
+
+  @media (min-width: 720px) {
+    @include padding-text-desktop;
+    float: right;
+  }
+}
+
+.workspace__language {
+  display: flex;
+  align-items: center;
+}
+
+.workspace__help {
+  display: flex;
+  align-items: center;
+
+  p {
+    font-size: 12px;
+  }
 }
